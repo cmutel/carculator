@@ -32,8 +32,8 @@ bibliography: paper.bib
 Life Cycle Assessment (LCA) is a tool that accounts for harmful emissions
 occurring in all the relevant phases of the life cycle of a product or service [@ISO2006].
 With the rising urgency for climate change mitigation, LCA has therefore emerged as a tool
-to support decisions for the design of policies. It is often used to compare technologies on the basis of a 
-common functional unit against some environmental indicators (e.g., emissions of greenhouse gases) [@Sala2016]. 
+to support decisions for the design of policies. It is often used to compare technologies on the basis of a
+common functional unit against some environmental indicators (e.g., emissions of greenhouse gases) [@Sala2016].
 
 In the field of mobility, LCA studies have largely focused on comparing fossil fuel-powered vehicles to
 battery electric or hydrogen-powered vehicles -- see for example [@Bauer2015].
@@ -47,7 +47,7 @@ to conclusions in contrast with the rest of the scientific literature.
 
 As a response to this situation, ``carculator`` was developed to perform LCA of different
 vehicle technologies in a transparent, open-source, reproducible and efficient manner.
- 
+
 ``carculator`` is a fully parameterized Python model that performs prospective
 LCA of passenger vehicles. The foreground modeling is based on a physical model that sizes vehicles of different types
 and dimensions and calculates the energy to move them over a given distance based on a driving cycle.
@@ -70,7 +70,7 @@ iron phosphate (LFP) battery type, manufactured in Norway.
 
     background_configuration = {
     # in this case, 100% hydropower
-    'custom electricity mix' : [[1,0,0,0,0,0,0,0,0,0]],            
+    'custom electricity mix' : [[1,0,0,0,0,0,0,0,0,0]],
     'petrol technology': 'bioethanol - wheat straw',
     'battery technology': 'LFP',
     'battery origin': 'NO'
@@ -94,14 +94,14 @@ iron phosphate (LFP) battery type, manufactured in Norway.
     results = ic.calculate_impacts()
 ```
 
-![ODP results per vehicle-kilometer, 1,000 iterations](https://github.com/romainsacchi/coarse/raw/master/docs/MC_example_article.png)
+![ODP results per vehicle-kilometer, 1,000 iterations](https://github.com/romainsacchi/carculator/raw/master/docs/MC_example_article.png)
 
 The analysis is done in 72 seconds on a modern laptop.
 
 Additionally, users can export and share the inventories of the car models as well as the uncertainty data,
 to reuse them in other LCA tools such as Brightway2 [@Mutel2017].
 
-``carculator`` benefits from an [online documentation](https://coarse-lci.readthedocs.io/en/latest/) as well as a [graphical user interface](http://carculator.psi.ch).
+``carculator`` benefits from an [online documentation](https://carculator.readthedocs.io/en/latest/) as well as a [graphical user interface](http://carculator.psi.ch).
 
 
 # Acknowledgements

@@ -45,7 +45,7 @@ class CarModel:
     :ivar mappings: Dictionary with names correspondence
     :vartype mappings: dict
     :ivar ecm: instance of :class:`EnergyConsumptionModel` class for a given driving cycle
-    :vartype ecm: coarse.energy_consumption.EnergyConsumptionModel
+    :vartype ecm: carculator.energy_consumption.EnergyConsumptionModel
 
     """
 

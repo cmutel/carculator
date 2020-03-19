@@ -1,14 +1,14 @@
 # ``carculator``
 
 <p align="center">
-  <img style="height:130px;" src="https://github.com/romainsacchi/coarse/raw/master/docs/mediumsmall.png">
+  <img style="height:130px;" src="https://github.com/romainsacchi/carculator/raw/master/docs/mediumsmall.png">
 </p>
 
 <p align="center">
   <a href="https://badge.fury.io/py/carculator" target="_blank"><img src="https://badge.fury.io/py/carculator.svg"></a>
   <a href="https://travis-ci.org/romainsacchi/carculator" target="_blank"><img src="https://travis-ci.org/romainsacchi/carculator.svg?branch=master"></a>
   <a href="https://ci.appveyor.com/project/romainsacchi/carculator" target="_blank"><img src="https://ci.appveyor.com/api/projects/status/github/romainsacchi/carculator?svg=true"></a>
-  <a href="https://coveralls.io/github/romainsacchi/coarse" target="_blank"><img src="https://coveralls.io/repos/github/romainsacchi/coarse/badge.svg"></a>
+  <a href="https://coveralls.io/github/romainsacchi/carculator" target="_blank"><img src="https://coveralls.io/repos/github/romainsacchi/carculator/badge.svg"></a>
   <a href="https://carculator.readthedocs.io/en/latest/" target="_blank"><img src="https://readthedocs.org/projects/carculator/badge/?version=latest"></a>
   <a href="https://doi.org/10.5281/zenodo.3582994"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3582994.svg" alt="DOI"></a>
 </p>
@@ -18,7 +18,7 @@ Prospective environmental and economic life cycle assessment of vehicles made bl
 A fully parameterized Python model developed by the [Technology Assessment group](https://www.psi.ch/en/ta) of the
 [Paul Scherrer Institut](https://www.psi.ch/en) to perform life cycle assessments (LCA) of vehicles.
 
-See [the documentation](https://coarse-lci.readthedocs.io/en/latest/index.html) for more detail, validation, etc.
+See [the documentation](https://carculator.readthedocs.io/en/latest/index.html) for more detail, validation, etc.
 
 ## Table of Contents
 
@@ -99,7 +99,7 @@ over 800 Monte Carlo iterations:
     plt.legend()
 ```
 
-![MC results](https://github.com/romainsacchi/coarse/raw/master/docs/stochastic_example_ttw.png)
+![MC results](https://github.com/romainsacchi/carculator/raw/master/docs/stochastic_example_ttw.png)
 
 Compare the carbon footprint of electric vehicles with that of rechargeable hybrid vehicles for different size categories today and in the future
 over 500 Monte Carlo iterations:
@@ -123,7 +123,7 @@ over 500 Monte Carlo iterations:
     plt.ylabel('kg CO2-eq./vkm')
 ```
 
-![MC results](https://github.com/romainsacchi/coarse/raw/master/docs/example_stochastic_BEV_PHEV.png)
+![MC results](https://github.com/romainsacchi/carculator/raw/master/docs/example_stochastic_BEV_PHEV.png)
 
 For more examples, see [examples](https://github.com/romainsacchi/carculator/blob/master/examples/Examples.ipynb).
 
