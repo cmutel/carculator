@@ -6,7 +6,6 @@ root_dir = os.path.dirname(__file__)
 if root_dir:
     os.chdir(root_dir)
 
-
 # Probably should be changed, __init__.py is no longer required for Python 3
 for dirpath, dirnames, filenames in os.walk("carculator"):
     # Ignore dirnames that start with '.'
@@ -24,10 +23,15 @@ def package_files(directory):
             paths.append(os.path.join("..", path, filename))
     return paths
 
+
 v_temp = {}
 with open("carculator/version.py") as fp:
     exec(fp.read(), v_temp)
 version = ".".join((str(x) for x in v_temp['version']))
+
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 
 setup(

@@ -1,4 +1,4 @@
-from .car_input_parameters import car_input_parameters as c_i_p
+from .car_input_parameters import CarInputParameters as c_i_p
 import numpy as np
 import pandas as pd
 import stats_arrays as sa
@@ -30,8 +30,8 @@ def fill_xarray_from_input_parameters(cip, sensitivity=False):
 
     """
 
-    # Check whether the argument passed is an cip object
-    if not isinstance(cip, c_i_p.CarInputParameters):
+    # Check whether the argument passed is a cip object
+    if not isinstance(cip, c_i_p):
         raise TypeError(
             "The argument passed is not an object of the CarInputParameter class"
         )
@@ -172,16 +172,37 @@ def modify_xarray_from_custom_parameters(fp, array):
 
     for k in d:
         if k[0] not in FORBIDDEN_KEYS:
-            if k[1].lower() != "all":
-                pt = [p.strip() for p in k[1].split(",")]
+            if not isinstance(k[1], str):
+                pt = [p.strip() for p in k[1] if p]
                 pt = [p for p in pt if p]
-            else:
+            elif k[1] == "all":
                 pt = array.coords["powertrain"].values
-
-            if k[2].lower() != "all":
-                sizes = [s.strip() for s in k[2].split(",") if s]
             else:
+                if k[1] in array.coords["powertrain"].values:
+                    pt = k[1]
+                else:
+                    print(
+                    "{} is not a recognized powertrain. It will be skipped.".format(
+                        k[1]
+                    )
+                )
+                continue
+
+
+            if not isinstance(k[2], str):
+                sizes = [s.strip() for s in k[2] if s]
+            elif k[2] == "all":
                 sizes = array.coords["size"].values
+            else:
+                if k[2] in array.coords["size"].values:
+                    sizes = k[2]
+                else:
+                    print(
+                    "{} is not a recognized size category. It will be skipped.".format(
+                        k[2]
+                    )
+                )
+                continue
 
             param = k[3]
 
