@@ -24,10 +24,15 @@ def package_files(directory):
             paths.append(os.path.join("..", path, filename))
     return paths
 
+v_temp = {}
+with open("carculator/version.py") as fp:
+    exec(fp.read(), v_temp)
+version = ".".join((str(x) for x in v_temp['version']))
+
 
 setup(
     name="carculator",
-    version="0.0.6",
+    version=version,
     packages=packages,
     author="Romain Sacchi <romain.sacchi@psi.ch>, Chris Mutel <christopher.mutel@psi.ch>",
     license=open("LICENSE").read(),

@@ -22,10 +22,9 @@ __all__ = (
     "BackgroundSystemModel",
     "ExportInventory",
 )
-__version__ = (0, 0, 6)
+from .version import version as __version__
 
 from pathlib import Path
-
 DATA_DIR = Path(__file__).resolve().parent / "data"
 
 
